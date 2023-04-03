@@ -1,0 +1,84 @@
+body {
+    background-color: #1C1C1C;
+}
+
+table {
+    color: #bdc1c6;
+    border-bottom: 1px solid;
+}
+
+td {
+    border-collapse: collapse;
+    width: 77px;
+}
+
+.calculadora {
+    margin: 30px 30px;
+}
+
+.box-resposta {
+    width: 530px;
+    height: 75px;
+    border: 1px solid;
+    border-radius: 10px;
+    text-align: right;
+}
+
+.resposta {
+    margin-top: 20px;
+    margin-right: 5px;
+    font-size: 50px;
+}
+
+.input {
+    position: relative;
+    width: 210px;
+    height: 15px;
+    margin: 7px 7px;
+}
+
+.valores {
+    width: 210px;
+}
+
+.valor1 {
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+}
+
+.valor2 {
+    border-radius: 10px;
+    width: 200px;
+    height: 20px;
+}
+
+.botoes {    
+    border: 1px solid;
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 4px;
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
+.botao {
+    padding: 5px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #696969;
+}
+
+.ultima_linha {
+    margin-bottom: 7px;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 0.5em;
+    line-height: 100%;
+}

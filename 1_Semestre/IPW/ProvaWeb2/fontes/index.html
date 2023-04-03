@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <script src="../javascript/script.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header class="mb-4 cabecalho">
+                <div class="cabecalho_titulo">
+                    <h2>Cadastro de clientes</h2>
+                </div>
+            </header>
+            <section class="formulario">
+                <form action="" class="mx-auto ">
+                    <!-- Primeira Linha -->
+                    <div class="row middle">
+                        <div class="col-lg-6 mb-3">
+                            <label for="userName" class="form-label">Nome</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="text" class="form-control" id="userName" placeholder="Digite o nome" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Segunda Linha -->
+                    <div class="row middle">
+                        <div class="col-lg-2 mb-3">
+                            <label for="userCpf" class="form-label">CPF Usuário</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="text" class="form-control cpf" name="cpfUsuario" id="userCpf" placeholder="CPF" maxlength="13" required onblur="verificaCpf(cpfUsuario.value)">
+                                </div>
+                            </div>
+                            <div class="valid-feedback" id="cpfValidado">
+                                CPF VÁLIDO!
+                            </div>
+                            <div class="invalid-feedback" id="cpfInvalidado">
+                                CPF INVÁLIDO!
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userBirthDate" class="form-label">Data de Nascimento</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="date" class="form-control" id="userBirthDate" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userPhone" class="form-label">Telefone</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="number" class="form-control" id="userPhone" placeholder="Telefone" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Terceira Linha -->
+                    <div class="row middle">
+                        <div class="d-flex justify-content-between col-lg-6 mb-3">
+                            <legend for="userSex" class="col-form-label col-sm-2 pt-0">Sexo:</legend>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="radio" class="form-check-input orientacaoSexual" id="checkBox1" value="naoInformar" name="estadoCivil" required>
+                                <label for="userSex" class="form-check-label">Não informar</label>
+                            </div>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="radio" class="form-check-input orientacaoSexual" id="checkBox2" value="masculino" name="estadoCivil" required>
+                                <label for="userSex" class="form-check-label">Masculino</label>
+                            </div>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="radio" class="form-check-input orientacaoSexual" id="checkBox3" value="feminino" name="estadoCivil" required>
+                                <label for="userSex" class="form-check-label">Feminino</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quarta Linha -->
+                    <div class="row middle">
+                        <div class="col-lg-3 mb-3">
+                            <label for="userAddress" class="form-label">Endereco</label>
+                            <div class="form-group">
+                                <div class="col-lg-13">
+                                    <input type="text" class="form-control" id="userAddress" placeholder="Informe o endereço" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userDistric" class="form-label">Bairro</label>
+                            <div class="form-group">
+                                <div class="col-lg-13">
+                                    <input type="text" class="form-control" id="userDistrict" placeholder="Informe o bairro" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 mb-3">
+                            <label for="userAnddressNumber" class="form-label">Número</label>
+                            <div class="form-group">
+                                <div class="col-lg-13">
+                                    <input type="number" class="form-control" id="userAnddressNumber" placeholder="Número" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Quinta Linha -->
+                    <div class="row middle">
+                        <div class="col-lg-2 mb-3">
+                            <label for="userLevelEducation" class="form-label">Escolaridade</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <select class="form-select" id="userLevelEducation">
+                                        <option value="elementarySchool" selected>Fundamental</option>
+                                        <option value="highSchool">Médio</option>
+                                        <option value="highterEducation">Superior</option>
+                                        <option value="especialist">Especialista</option>
+                                        <option value="mastersDegree">Mestrado</option>
+                                        <option value="doctorateDegree">Doutorado</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userEmail" class="form-label">E-mail</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="email" class="form-control" id="userEmail" placeholder="Informe o E-mail" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userPassword" class="form-label">Senha</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="password" class="form-control" name="senhaUsuario" id="userPassword" placeholder="Escolha a senha" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sexta Linha -->
+                    <div class="row middle">
+                        <div class="d-flex justify-content-between col-lg-6 mb-3">
+                            <legend for="userSex" class="col-form-label col-sm-2 pt-0">Ocupação:</legend>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="checkbox" class="form-check-input ocupacao" id="checkBox1" value="naoInformar" name="estadoCivil">
+                                <label for="userSex" class="form-check-label">Profissional Liberal</label>
+                            </div>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="checkbox" class="form-check-input ocupacao" id="checkBox2" value="masculino" name="estadoCivil">
+                                <label for="userSex" class="form-check-label">Microempresário</label>
+                            </div>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="checkbox" class="form-check-input ocupacao" id="checkBox3" value="feminino" name="estadoCivil">
+                                <label for="userSex" class="form-check-label">CLT</label>
+                            </div>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="checkbox" class="form-check-input ocupacao" id="checkBox3" value="feminino" name="estadoCivil">
+                                <label for="userSex" class="form-check-label">Outros</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sétima Linha -->
+                    <div class="row middle">
+                        <div class="col-lg-6 mb-3">
+                            <label for="observations" class="form-label">Tipos de entretenimentos favoritos</label>
+                            <div class="form-group">
+                                <textarea name="observacao" id="observations" cols="6" rows="3" class="form-control" 
+                                placeholder="Digite aqui seus entretenimentos favoritos" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Oitava Linha -->
+                    <div class="row middle">
+                        <div class="col-lg-6 mb-3 d-flex justify-content-around">
+                            <div class="col-lg-13">
+                                <button type="button" class="btn btn-primary btn-sm" id="btn-submit" onchange="verificaCpf(cpfUsuario.value)">
+                                    <i class="fa fa-paper-plane"></i>
+                                    Enviar dados
+                                </button>
+                            </div>
+                            <div class="col-lg-15">
+                                <button type="reset" class="btn btn-danger btn-sm" id="btn-reset">
+                                    <i class="fas fa-trash"></i>
+                                    Limpar dados
+                                </button>
+                            </div>
+                            <div class="col-lg-15">
+                                <button type="reset" class="btn btn-warning btn-sm" id="valida" onclick="validaSenha(senhaUsuario.value)">
+                                    Valida Senha
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </body>
+</html>

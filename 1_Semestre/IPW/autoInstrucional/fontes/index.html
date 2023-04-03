@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
+        <title>Calculadora</title>
+    </head>
+    <body>
+
+        <table class="calculadora">
+            <thead>
+                <tr>
+                    <th colspan="6">
+                        <div class="box-resposta">
+                            <div class="resposta"><span class="resultado">0</span></div>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="2">
+                        <div class="input">
+                            <div class="valores">
+                                <input name="btn-valor" class="valor1" type="text">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao somar" role="button" onclick="somar()">
+                                +
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao subtrair" role="button" onclick="subtrair()">
+                                -
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao multiplicacao" role="button" onclick="multiplicar()">
+                                *
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao divisao" role="button" onclick="dividir()">
+                                /
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="input">
+                            <div class="valores">
+                                <input class="valor2" id="value1" type="text">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao potencia" role="button" onclick="potenciacao()">
+                                x<sup>y</sup>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao fatorial" role="button" onclick="fatorial(valor1.value)">n!</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao euler" role="button" onclick="euler(valor1.value)">e</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao fibonacci" role="button" onclick="chamarFibonacci(valor1.value)">Fibonacci</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td rowspan="3" colspan="2">
+                        <div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao pi" role="button" onclick="pi()">PI</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao inverso" role="button" onclick="inverso()">1/x</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao euler_elevadoX" role="button" onclick="eulerX(valor1.value)">
+                                e<sup>x</sup>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao ln" role="button" onclick="logaritmo()">ln()</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao seno" role="button" onclick="seno()">sen</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao coseno" role="button" onclick="cosseno()">cos</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao tangente" role="button" onclick="tangente()">tan</div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="botoes">
+                            <div class="botao mod" role="button" onclick="modulo()">Mod</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="botoes ultima_linha">
+                            <div class="botao binario" role="button" onclick="binario()">Binário</div>
+                        </div>
+                        </td>
+                        <td>
+                            <div class="botoes ultima_linha">
+                                <div class="botao octa" role="button" onclick="octa()">Octa</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="botoes ultima_linha">
+                                <div class="botao hexa" role="button" onclick="hexa()">Hexa</div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="botoes ultima_linha">
+                                <div class="botao baseN" role="button" onclick="baseN()">BaseN</div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script src="../javascript/script.js"></script>
+    </body>
+</html>

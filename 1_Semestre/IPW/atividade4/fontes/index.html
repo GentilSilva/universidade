@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <title>Formulário</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <header class="mb-4 cabecalho">
+                <div class="cabecalho_imagem">
+                    <img class="imagem_fumec" src="../imagens/logo_fumec.png" alt="logo Fumec">
+                </div>
+                <div class="cabecalho_titulo">
+                    <h2>Ficha cadastral Fumec</h2>
+                </div>
+            </header>
+            <section class="formulario">
+                <form class="mx-auto form-border" action="">
+                    <!--Primeira linha-->
+                    <div class="row middle">
+                        <div class="col-lg-6 mb-3">
+                            <label for="userName" class="form-label">Nome</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="text" class="form-control" id="userName" maxlength="55" placeholder="Nome" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Segunda linha-->
+                    <div class="row middle">
+                        <div class="col-lg-2 mb-3">
+                            <label for="userRg" class="form-label">RG Usuário</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="text" class="form-control" id="userRg" placeholder="RG" maxlength="13" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userCpf" class="form-label">CPF Usuário</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="text" class="form-control cpf" id="userCpf" placeholder="CPF" maxlength="13" required onblur="validaCpf()">
+                                </div>
+                            </div>
+                            <div class="valid-feedback" id="cpfValidado">
+                                CPF VÁLIDO!
+                            </div>
+                            <div class="invalid-feedback" id="cpfInvalidado">
+                                CPF INVÁLIDO!
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userPhone" class="form-label">Telefone</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="number" class="form-control" id="userPhone" placeholder="Telefone" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Terceira linha-->
+                    <div class="row middle">
+                        <div class="col-lg-2 mb-3">
+                            <label for="userEmail" class="form-label">E-mail</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="email" class="form-control" id="userEmail" placeholder="E-mail" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userLogin" class="form-label">Login</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="text" class="form-control" id="userLogin" placeholder="Login" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userPassword" class="form-label">Senha</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="password" class="form-control" id="userPassword" placeholder="Senha" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Quarta linha-->
+                    <div class="row middle">
+                        <div class="col-lg-3 mb-3">
+                            <label for="userAddress" class="form-label">Logradouro</label>
+                            <div class="form-group">
+                                <div class="col-lg-13">
+                                    <input type="text" class="form-control" id="userAddress" placeholder="Logradouro" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userDistric" class="form-label">Bairro</label>
+                            <div class="form-group">
+                                <div class="col-lg-13">
+                                    <input type="text" class="form-control" id="userDistrict" placeholder="Bairro" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 mb-3">
+                            <label for="userAnddressNumber" class="form-label">Número</label>
+                            <div class="form-group">
+                                <div class="col-lg-13">
+                                    <input type="number" class="form-control" id="userAnddressNumber" placeholder="Número" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Quinta linha-->
+                    <div class="row middle">
+                        <div class="col-lg-2 mb-3">
+                            <label for="userLevelEducation" class="form-label">Escolaridade</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <select class="form-select" id="userLevelEducation">
+                                        <option value="elementarySchool" selected>Fundamental</option>
+                                        <option value="highSchool">Médio</option>
+                                        <option value="incompleteHighEducation">Superior incompleto</option>
+                                        <option value="higherEducation">Superior completo</option>
+                                        <option value="mastersDegree">Mestrado</option>
+                                        <option value="doctorateDegree">Doutorado</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userSex" class="form-label">Gênero</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <select class="form-select" id="userSex">
+                                        <option value="inBlank" selected>Não informar</option>
+                                        <option value="male">Masculino</option>
+                                        <option value="female">Feminino</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 mb-3">
+                            <label for="userBirthDate" class="form-label">Data de Nascimento</label>
+                            <div class="form-group">
+                                <div class="col-lg-15">
+                                    <input type="date" class="form-control" id="userBirthDate" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sexta linha-->
+                    <div class="row middle">
+                        <div class="d-flex justify-content-between col-lg-6 mb-3">
+                            <legend for="maritalStatus" class="col-form-label col-sm-2 pt-0">Estado Civíl:</legend>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="radio" class="form-check-input estadoCivil" id="checkBox1" value="solteiro" name="estadoCivil" required>
+                                <label for="maritalSatus" class="form-check-label">Solteiro(a)</label>
+                            </div>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="radio" class="form-check-input estadoCivil" id="checkBox2" value="casado" name="estadoCivil" required>
+                                <label for="maritalSatus" class="form-check-label">Casado(a)</label>
+                            </div>
+                            <div class="form-check ml-5 form-check-inline">
+                                <input type="radio" class="form-check-input estadoCivil" id="checkBox3" value="viuvo" name="estadoCivil" required>
+                                <label for="maritalSatus" class="form-check-label">Viúvo(a)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Sétima linha-->
+                    <div class="row middle">
+                        <div class="col-lg-6 mb-3">
+                            <label for="observations" class="form-label">Observações</label>
+                            <div class="form-group">
+                                <textarea name="observacao" id="observations" cols="6" rows="3" class="form-control" placeholder="Alguma observação? Digite aqui!" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Oitava linha-->
+                    <div class="row middle">
+                        <div class="col-lg-6 mb-3 d-flex justify-content-around">
+                            <div class="col-lg-13">
+                                <button type="submit" class="btn btn-primary btn-sm" id="btn-submit" onchange="validaCpf()">
+                                    <i class="fa fa-paper-plane"></i>
+                                    Enviar dados
+                                </button>
+                            </div>
+                            <div class="col-lg-15">
+                                <button type="reset" class="btn btn-warning btn-sm" id="btn-reset">
+                                    <i class="fas fa-trash"></i>
+                                    Limpar dados
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <script src="../javascript/script.js"></script>
+    </body>
+</html>

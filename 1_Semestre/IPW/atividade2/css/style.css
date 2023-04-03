@@ -1,0 +1,213 @@
+html {
+    background-color: #f0ffff;
+}
+
+#cabecalho {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0px 5px 0;
+}
+
+.imagem-cabecalho {
+    width: 200px;
+}
+
+.titulo-cabecalho {
+    font-style: italic;
+    font-family: serif;
+    font-size: 60px;
+    margin-left: 5px;
+    margin-top: 33px;
+}
+
+.texto-descritivo {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.titulo-menu {
+    font-style: italic;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;    
+    padding: 1rem;   
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu__item {
+    list-style-type: none;
+}
+
+.menu__item:last-child .menu__link {
+    margin-right: 0;
+}
+
+.menu__link {
+    color: #808080;
+    margin-left: 12.3rem;
+    margin-right: 1.25rem;
+    text-decoration: none;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.marquee {
+    font-style: italic;
+    background-color: blueviolet;
+}
+
+#secao-mocha {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagem-mocha {
+    width: 15rem;
+}
+
+.titulo-mocha {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 6rem 0 0 0rem;
+}
+
+.titulo-mocha2 {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 8.5rem 0 0 0;
+    margin-left: -2.5rem;
+}
+
+.descricao {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.receita {
+    font-size: 20px;
+    text-align: justify;
+}
+
+.curiosidade {
+    font-size: 20px;
+    text-align: justify;
+}
+
+#secao-arabica {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagem-arabica {
+    border-radius: 2rem;
+    width: 15rem;
+}
+
+.titulo-arabica {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 2rem 0 0 0.5rem;
+}
+
+.titulo-arabica2 {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 4.5rem 0 0 0;
+    margin-left: -2.5rem;
+}
+
+#secao-cappuccino {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagem-cappuccino {
+    border-radius: 2rem;
+    width: 14rem;
+}
+
+.titulo-cappuccino {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 2rem 0 0 0.5rem;
+}
+
+.titulo-cappuccino2 {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 5rem 0 0 0;
+    margin-left: -2.5rem;
+}
+
+#secao-express {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagem-express {
+    border-radius: 2rem;
+    width: 15rem;
+}
+
+.titulo-expresso {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 1rem 0 0 0.5rem;
+}
+
+.titulo-expresso2 {
+    font-family: serif;
+    font-size: 50px;
+    font-style: italic;
+    margin: 4rem 0 0 0;
+    margin-left: -2.5rem;
+}
+
+.link-externo {
+    color: #808080;
+    text-decoration: none;
+}
+
+.link-externo:hover {
+    font-weight: bold;
+    color: cadetblue;
+    cursor: pointer;
+}
+
+.caixa-link-interno {
+    text-align: center;
+}
+
+.link-interno {
+    color: #808080;
+}
+
+.link-interno:hover {
+    font-weight: bold;
+    color: cadetblue;
+    cursor: pointer;
+}
+
+
