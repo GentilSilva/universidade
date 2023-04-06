@@ -1,4 +1,4 @@
-package exercicios.fundamentosProgramacao.capitulo.um;
+package exercicios.fundamentosProgramacao.capitulo.tres;
 
 import java.util.Scanner;
 
