@@ -2,7 +2,7 @@ package exercicios.fundamentosProgramacao.capitulo.tres;
 
 import java.util.Scanner;
 
-public class AtividadeQuartoze {
+public class AtividadeQuatorze {
 
     public static void main(String[] args) {
 
