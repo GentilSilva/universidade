@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="711e744a-ccdb-4465-b336-669ebd633279" name="Changes" comment="" />
+    <list default="true" id="711e744a-ccdb-4465-b336-669ebd633279" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/2_Semestre/Ltp2/src/exercicios/fundamentosProgramacao/capitulo/cinco/exercicios/fundamentosProgramacao/capitulo/cinco/AtividadeUm.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,7 +22,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/gentil/Documentos/workspace/universidade/2_Semestre/Ltp2",
+    "last_opened_file_path": "C:/Users/genti/Documents/workspace/universidade/2_Semestre",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
